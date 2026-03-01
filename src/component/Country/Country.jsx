@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import './Country.css'
 
-const Country = ({country}) => {
+const Country = ({country,handleVisitedCountry}) => {
 //  console.log(country.flags.flags)
 const [visited,setVisited]=useState(false);
 function clickVisitBtn()
 {
   setVisited(!visited);
+  handleVisitedCountry(country);
   
 }
   return (
